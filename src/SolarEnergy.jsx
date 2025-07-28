@@ -12,37 +12,12 @@ const SolarEnergy = () => {
       buttonText: "Read More",
       isHighlighted: false,
       detailedContent: {
-        title: "My Home, My Own Energy",
-        overview: "Innovative products and services. The ideal solution for everyone in the field of solar energy. For a world worth living in. Become self-sufficient and independent from fluctuating prices of electricity and fossil fuels! It's that simple.",
-        features: [
-          "Complete package for hassle-free solar panel installation",
-          "Full range of carefully tested components",
-          "Comprehensive system planning and services",
-          "Combined warranty from a single source",
-          "Highest quality components and installation",
-          "Modular systems for quick and cost-effective installation"
-        ],
-        benefits: [
-          "Reduce electricity costs by at least 30%",
-          "Additional 80% cost reduction with solar energy storage",
-          "Achieve up to 80% self-sufficiency",
-          "Favorable electricity prices and complete predictability",
-          "High degree of independence from grid fluctuations",
-          "Environmentally friendly and sustainable energy source"
-        ],
-        process: [
-          "Book a consultation - Personalized and tailored advice with precise site analysis",
-          "Planning - Individual energy solution integration for maximum efficiency",
-          "Installation - Quick and professional installation by expert partners",
-          "Commissioning - Detailed commissioning report with technical management options"
-        ],
-        additionalInfo: {
-          title: "Be Independent, Save Money and Care for the Environment",
-          subtitle: "My Electricity. My Independence.",
-          description: "The best way to combat unpredictable electricity prices is to produce your own electricity. Combined with a solar energy storage system, a solar installation allows you to achieve up to 80% self-sufficiency at an economically advantageous price. Favorable electricity prices, complete predictability and a high degree of independence. Enjoy the sun!",
-          savingsInfo: "Let your electricity bills melt in the sun. Self-generated solar energy is not only environmentally friendly, but also cheaper than electricity from the regular grid. The higher the share of self-generated electricity, the greater the savings. The combination of an energy management system (EMS) and solar energy storage allows you to unleash its full potential.",
-          sustainabilityInfo: "Sustainable development is an integral part of our activities. With us, you are taking a big step towards a sustainable energy supply independent of fossil fuels. Good to know: Solar energy systems have a huge impact on the environment and allow you to reduce CO2 emissions by several million tons annually."
-        }
+        title: "Home Energy Solutions",
+        overview: `Innovative products and services. The ideal solution for everyone in the field of solar energy.\n\nMy home, my own energy.\nFor a world worth living in. Become self-sufficient and independent from fluctuating prices of electricity and fossil fuels! It's that simple.\n\nBarrco Ventures offers you a complete package for hassle-free solar panel installation. We offer a full range of carefully tested components, comprehensive system planning and services such as a combined warranty. All from a single source and of the highest quality. While your new solar power plant generates electricity, you can focus on what is most important: your life.\nMake your own electricity. Don't pay anymore. \nWhat a brilliant idea! In many countries, solar energy is already about three-quarters cheaper than regular electricity from the grid. Generating and using your own solar energy can reduce your electricity costs by at least 30%. Using an additional solar energy storage system will reduce your costs by another 80%.\n\nFour steps to a photovoltaic system.\nStep1\nBook a consultation\nPersonalised and tailored advice is our strength. We ensure that your photovoltaic system and energy storage solution will perfectly match your requirements. We will carry out a precise site analysis, provide comprehensive advice and discuss financing options.\n\nStep 2\n\nPlanning\nWe will plan the implementation of your individual energy solution. Our goal is to integrate it into your home so that it operates as efficiently as possible and achieves maximum efficiency. This will allow you to use as much solar energy as possible.\n\nStep3\nInstallation\nThe modularity of our systems allows you to install your system quickly and cost-effectively in just a few days. Our partners are experts in their field, and all work on installing your energy system is carried out professionally.\nStep4\nCommissioning\n\nWe will commission your system and provide you with a detailed commissioning report. Upon request, we will take over the technical management of the system, monitor its operation, check its functionality and notify you of any malfunctions. You have nothing to worry about.\n\nBe independent, save money and care for the environment.\nMy electricity. My independence.\nThe best way to combat unpredictable electricity prices is to produce your own electricity. Combined with a solar energy storage system, a solar installation allows you to achieve up to 80% self-sufficiency at an economically advantageous price. Favorable electricity prices, complete predictability and a high degree of independence. Enjoy the sun!\n\nLet your electricity bills melt in the sun.\nSelf-generated solar energy is not only environmentally friendly, but also cheaper than electricity from the regular grid. The higher the share of self-generated electricity, the greater the savings. The combination of an energy management system (EMS) and solar energy storage allows you to unleash its full potential.\n\nSustainable development is an integral part of our activities.\nWith us, you are taking a big step towards a sustainable energy supply independent of fossil fuels. Good to know: Solar energy systems have a huge impact on the environment and allow you to reduce CO2 emissions by several million tons annually.`,
+        features: [],
+        benefits: [],
+        process: [],
+        additionalInfo: null
       }
     },
     {
@@ -367,7 +342,6 @@ const SolarEnergy = () => {
           </div>
         </div>
       </div>
-
       {/* Modal for Detailed Information */}
       {showModal && selectedService && (
         <div 
@@ -376,7 +350,7 @@ const SolarEnergy = () => {
           onClick={closeModal}
         >
           <div className="modal-dialog modal-lg modal-dialog-centered">
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-content" onClick={e => e.stopPropagation()}>
               <div className="modal-header border-0 pb-0">
                 <h4 className="modal-title fw-bold" style={{ color: '#2c3e50' }}>
                   {selectedService.detailedContent.title}
@@ -389,178 +363,17 @@ const SolarEnergy = () => {
                 ></button>
               </div>
               <div className="modal-body">
-                {/* Show exact user text for Home Energy */}
-                {selectedService.title === "Home Energy" ? (
-                  <div style={{ fontSize: '1.1rem', color: '#333' }}>
-                    <div style={{ whiteSpace: 'pre-line' }}>
-Innovative products and services. The ideal solution for everyone in the field of solar energy.
-
-My home, my own energy.
-For a world worth living in. Become self-sufficient and independent from fluctuating prices of electricity and fossil fuels! It's that simple.
-
-Barrco Ventures offers you a complete package for hassle-free solar panel installation. We offer a full range of carefully tested components, comprehensive system planning and services such as a combined warranty. All from a single source and of the highest quality. While your new solar power plant generates electricity, you can focus on what is most important: your life.
-Make your own electricity. Don't pay anymore. 
-What a brilliant idea! In many countries, solar energy is already about three-quarters cheaper than regular electricity from the grid. Generating and using your own solar energy can reduce your electricity costs by at least 30%. Using an additional solar energy storage system will reduce your costs by another 80%.
-                    </div>
-
-                    {/* Steps Section */}
-                    <div className="my-4 p-4" style={{ background: '#f1f5f9', borderRadius: '14px', border: '1px solid #e0e7ef' }}>
-                      <h5 className="fw-bold mb-3" style={{ color: '#1976d2', letterSpacing: '1px' }}>Four steps to a photovoltaic system</h5>
-                      <div className="mb-3">
-                        <span className="badge bg-primary me-2" style={{ fontSize: '1rem', padding: '8px 16px' }}>Step 1</span>
-                        <span className="fw-bold">Book a consultation</span>
-                        <div className="ms-4 mt-2" style={{ color: '#555' }}>
-                          Personalised and tailored advice is our strength. We ensure that your photovoltaic system and energy storage solution will perfectly match your requirements. We will carry out a precise site analysis, provide comprehensive advice and discuss financing options.
-                        </div>
-                      </div>
-                      <div className="mb-3">
-                        <span className="badge bg-primary me-2" style={{ fontSize: '1rem', padding: '8px 16px' }}>Step 2</span>
-                        <span className="fw-bold">Planning</span>
-                        <div className="ms-4 mt-2" style={{ color: '#555' }}>
-                          We will plan the implementation of your individual energy solution. Our goal is to integrate it into your home so that it operates as efficiently as possible and achieves maximum efficiency. This will allow you to use as much solar energy as possible.
-                        </div>
-                      </div>
-                      <div className="mb-3">
-                        <span className="badge bg-primary me-2" style={{ fontSize: '1rem', padding: '8px 16px' }}>Step 3</span>
-                        <span className="fw-bold">Installation</span>
-                        <div className="ms-4 mt-2" style={{ color: '#555' }}>
-                          The modularity of our systems allows you to install your system quickly and cost-effectively in just a few days. Our partners are experts in their field, and all work on installing your energy system is carried out professionally.
-                        </div>
-                      </div>
-                      <div>
-                        <span className="badge bg-primary me-2" style={{ fontSize: '1rem', padding: '8px 16px' }}>Step 4</span>
-                        <span className="fw-bold">Commissioning</span>
-                        <div className="ms-4 mt-2" style={{ color: '#555' }}>
-                          We will commission your system and provide you with a detailed commissioning report. Upon request, we will take over the technical management of the system, monitor its operation, check its functionality and notify you of any malfunctions. You have nothing to worry about.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div style={{ whiteSpace: 'pre-line' }}>
-Be independent, save money and care for the environment.
-My electricity. My independence.
-The best way to combat unpredictable electricity prices is to produce your own electricity. Combined with a solar energy storage system, a solar installation allows you to achieve up to 80% self-sufficiency at an economically advantageous price. Favorable electricity prices, complete predictability and a high degree of independence. Enjoy the sun!
-
-Let your electricity bills melt in the sun.
-Self-generated solar energy is not only environmentally friendly, but also cheaper than electricity from the regular grid. The higher the share of self-generated electricity, the greater the savings. The combination of an energy management system (EMS) and solar energy storage allows you to unleash its full potential.
- 
-Sustainable development is an integral part of our activities.
-With us, you are taking a big step towards a sustainable energy supply independent of fossil fuels. Good to know: Solar energy systems have a huge impact on the environment and allow you to reduce CO2 emissions by several million tons annually.
-                    </div>
-                  </div>
-                ) : selectedService.title === "Energy for Businesses" ? (
-                  <div style={{ fontSize: '1.1rem', color: '#333' }}>
-                    <div style={{ whiteSpace: 'pre-line', textAlign: 'justify' }}>
-Turn your roof into a source of income.
-Photovoltaic systems for enterprises are one of the best business solutions.
-As your partner, we want you to be able to fully focus on what really matters: your business. That's why we help you plan your energy costs over the long term and significantly reduce your operating costs. With our highly efficient photovoltaic systems for businesses, you not only gain access to an inexpensive energy source whose price will remain stable for decades, but also increase your competitiveness in a sustainable way. Let solar energy bring joy. Enjoy the sun!
-                    </div>
-
-                    {/* Reduce Operating Costs Section */}
-                    <div className="my-4 p-4" style={{ background: '#f8f9fa', borderRadius: '14px', border: '1px solid #e0e7ef' }}>
-                      <h5 className="fw-bold mb-3" style={{ color: '#1976d2', letterSpacing: '1px' }}>Reduce operating costs.</h5>
-                      <p style={{ textAlign: 'justify', color: '#555', lineHeight: '1.7', margin: 0 }}>
-                        Self-sustaining solar power will instantly reduce your operating costs. This is because it is currently about five times cheaper than conventional electricity in the commercial sector. The more solar power you consume for your business, the more independent you become and the more you save on purchasing electricity. What's more, you have a fixed price for electricity, which remains the same in your operating costs for decades. This helps you plan for the long term. Once the cost of the system is calculated, the price per kilowatt-hour of electricity is fixed for the entire service life. So, choose solar power and be confident in your abilities when planning your electricity costs.
-                      </p>
-                    </div>
-
-                    {/* Increase Revenue Section */}
-                    <div className="my-4 p-4" style={{ background: '#e3f2fd', borderRadius: '14px', border: '1px solid #bbdefb' }}>
-                      <h5 className="fw-bold mb-3" style={{ color: '#1976d2', letterSpacing: '1px' }}>Increase revenue.</h5>
-                      <p style={{ textAlign: 'justify', color: '#555', lineHeight: '1.7', margin: 0 }}>
-                        Ideally, your solar system should generate more electricity than your business consumes. You can feed the excess into the public grid and receive a fixed 20-year tariff regulated by the Renewable Energy Act (EEG). Or you can sell the electricity directly, which is required by law from a certain system size onwards. This further increases the profitability of your PV system.
-                      </p>
-                    </div>
-
-                    {/* Process Section */}
-                    <div className="my-4 p-4" style={{ background: '#f1f5f9', borderRadius: '14px', border: '1px solid #e0e7ef' }}>
-                      <h5 className="fw-bold mb-3" style={{ color: '#1976d2', letterSpacing: '1px' }}>The path to your commercial solar system.</h5>
-                      <p style={{ textAlign: 'justify', color: '#555', lineHeight: '1.7', margin: 0 }}>
-                        Contact us for an analysis, calculation and a non-binding preliminary consultation. You will then receive a personalized offer. Upon your approval, our team of specialists will install and commission your system, providing you with a detailed commissioning report. Upon request, we will take over the technical management of the system, monitor its operation, check its functionality and notify you of any faults. You have nothing to worry about.
-                      </p>
-                    </div>
-
-                    {/* Sustainability Section */}
-                    <div className="my-4 p-4" style={{ background: '#e8f5e8', borderRadius: '14px', border: '1px solid #c8e6c9' }}>
-                      <h5 className="fw-bold mb-3" style={{ color: '#2e7d32', letterSpacing: '1px' }}>The Solar system - beneficial for your business and the climate.</h5>
-                      <p style={{ textAlign: 'justify', color: '#555', lineHeight: '1.7', marginBottom: '1rem' }}>
-                        Commitment to sustainability and renewable energy is important to everyone. Your customers and employees will appreciate the fact that you have the future of renewable energy installed on your roof. A photovoltaic system will demonstrate to everyone that your company understands the importance of environmental protection and is committed to it.
-                      </p>
-                      <ul className="list-unstyled" style={{ margin: 0 }}>
-                        <li className="mb-2">
-                          <i className="fas fa-leaf text-success me-2"></i>
-                          <span style={{ color: '#555' }}>Sustainability is becoming a choice criterion for more and more customers.</span>
-                        </li>
-                        <li className="mb-2">
-                          <i className="fas fa-leaf text-success me-2"></i>
-                          <span style={{ color: '#555' }}>Sustainability is becoming a standard for many investors.</span>
-                        </li>
-                        <li className="mb-2">
-                          <i className="fas fa-leaf text-success me-2"></i>
-                          <span style={{ color: '#555' }}>Renewable energy saves resources.</span>
-                        </li>
-                        <li className="mb-2">
-                          <i className="fas fa-leaf text-success me-2"></i>
-                          <span style={{ color: '#555' }}>Your employees will appreciate it.</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                ) : selectedService.title === "Solar Power Plant" ? (
-                  <div style={{ fontSize: '1.1rem', color: '#333' }}>
-                    <div style={{ whiteSpace: 'pre-line', textAlign: 'justify' }}>
-Solar Power. A safe investment.
-The idea of converting solar energy into useful solar cell energy using semiconductors has changed our world. It gives us the opportunity to abandon energy obtained from depleting fossil fuels. If you want to take a responsible step into the future for your company or private household by switching to renewable energy sources and at the same time significantly saving on energy costs, We aim to make solar energy a real alternative to conventional generation.
-                    </div>
-
-                    {/* Features Section */}
-                    <div className="my-4 p-4" style={{ background: '#f8f9fa', borderRadius: '14px', border: '1px solid #e0e7ef' }}>
-                      <h5 className="fw-bold mb-3" style={{ color: '#1976d2', letterSpacing: '1px' }}>Key Features</h5>
-                      <ul className="list-unstyled">
-                        {selectedService.detailedContent.features.map((feature, index) => (
-                          <li key={index} className="mb-2">
-                            <i className="fas fa-check-circle text-success me-2"></i>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Benefits Section */}
-                    <div className="my-4 p-4" style={{ background: '#e3f2fd', borderRadius: '14px', border: '1px solid #bbdefb' }}>
-                      <h5 className="fw-bold mb-3" style={{ color: '#1976d2', letterSpacing: '1px' }}>Benefits</h5>
-                      <ul className="list-unstyled">
-                        {selectedService.detailedContent.benefits.map((benefit, index) => (
-                          <li key={index} className="mb-2">
-                            <i className="fas fa-star text-warning me-2"></i>
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Process Section */}
-                    <div className="my-4 p-4" style={{ background: '#f1f5f9', borderRadius: '14px', border: '1px solid #e0e7ef' }}>
-                      <h5 className="fw-bold mb-3" style={{ color: '#1976d2', letterSpacing: '1px' }}>The path to your solar power plant.</h5>
-                      <p style={{ textAlign: 'justify', color: '#555', lineHeight: '1.7', margin: 0 }}>
-                        Planning and system design with specialist partners. Component selection based on specific circumstances. Quality assurance through strict production standards. Regular internal controls and independent certifications. Professional installation and commissioning. Ongoing monitoring and maintenance support.
-                      </p>
-                    </div>
-
-                    {/* Additional Info Section */}
-                    <div className="my-4 p-4" style={{ background: '#e8f5e8', borderRadius: '14px', border: '1px solid #c8e6c9' }}>
-                      <h5 className="fw-bold mb-3" style={{ color: '#2e7d32', letterSpacing: '1px' }}>We partner to achieve sustainable success in large-scale solar energy projects</h5>
-                      <p style={{ textAlign: 'justify', color: '#555', lineHeight: '1.7', marginBottom: '1rem' }}>
-                        Solar power plants are a great investment. They make a valuable contribution to the development of clean energy and provide a high long-term return on investment if done correctly. With us, you as an investor, local authority or private landowner can be sure of high efficiency and maximum profitability of your solar power plant. We offer the highest quality and many years of experience in design and operation. Enjoy the sun!
-                      </p>
-                      <p style={{ textAlign: 'justify', color: '#555', lineHeight: '1.7', marginBottom: '1rem' }}>
-                        Barrco and its specialist partners offer competent customer service at all stages – from planning to implementation of solar energy systems. The highest quality of individual components, especially solar modules, is our priority. The type of solar module must be selected taking into account the specific circumstances: decisive factors are the load-bearing capacity of the roof, wind load, snow load in the regions, resistance to salt water, roof surface area, roof pitch and the desired efficiency.
-                      </p>
-                      <p style={{ textAlign: 'justify', color: '#555', lineHeight: '1.7' }}>
-                        Barrco pays great attention to the efficiency and durability of each solar module. We guarantee the quality of our solar systems. Thanks to strict production standards, we deliver systems and solutions of the highest level. To maintain this standard, we regularly conduct internal controls as well as independent certifications and assessments. Our well-thought-out systems consist of high-quality individual components that are optimally combined with each other.
-                      </p>
-                    </div>
-                  </div>
+                {selectedService.title === "Home Energy Solutions" ? (
+                  <pre style={{
+                    whiteSpace: 'pre-wrap',
+                    textAlign: 'justify',
+                    fontSize: '1.1rem',
+                    color: '#333',
+                    background: '#f8f9fa',
+                    borderRadius: '12px',
+                    padding: '1.5rem',
+                    boxShadow: '0 2px 12px rgba(30,64,175,0.07)'
+                  }}>{selectedService.detailedContent.overview}</pre>
                 ) : (
                   <>
                     <p className="text-muted mb-4" style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
@@ -601,6 +414,42 @@ The idea of converting solar energy into useful solar cell energy using semicond
                         </ul>
                       </div>
                     </div>
+                    {/* Additional Info Section */}
+                    {selectedService.detailedContent.additionalInfo && (
+                      <div className="mt-4 p-4" style={{ backgroundColor: '#f8f9fa', borderRadius: '12px' }}>
+                        <h4 className="fw-bold mb-3" style={{ color: '#2c3e50' }}>
+                          {selectedService.detailedContent.additionalInfo.title}
+                        </h4>
+                        {selectedService.detailedContent.additionalInfo.subtitle && (
+                          <h5 className="fw-bold mb-3" style={{ color: '#1976d2' }}>
+                            {selectedService.detailedContent.additionalInfo.subtitle}
+                          </h5>
+                        )}
+                        <p className="text-muted mb-3" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+                          {selectedService.detailedContent.additionalInfo.description}
+                        </p>
+                        {selectedService.detailedContent.additionalInfo.savingsInfo && (
+                          <p className="text-muted mb-3" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+                            {selectedService.detailedContent.additionalInfo.savingsInfo}
+                          </p>
+                        )}
+                        {selectedService.detailedContent.additionalInfo.sustainabilityInfo && (
+                          <p className="text-muted mb-0" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+                            {selectedService.detailedContent.additionalInfo.sustainabilityInfo}
+                          </p>
+                        )}
+                        {selectedService.detailedContent.additionalInfo.benefits && (
+                          <ul className="list-unstyled mt-3">
+                            {selectedService.detailedContent.additionalInfo.benefits.map((benefit, index) => (
+                              <li key={index} className="mb-2">
+                                <i className="fas fa-leaf text-success me-2"></i>
+                                {benefit}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    )}
                   </>
                 )}
               </div>

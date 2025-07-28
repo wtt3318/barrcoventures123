@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "./assets/barrco-ventures-logo.png";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -8,7 +10,7 @@ const Footer = () => {
         <div className="row gy-4 align-items-start justify-content-center text-center text-md-start">
           {/* Logo & Company Info */}
           <div className="col-12 col-md-4 col-lg-3 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
-          
+            <img src={logo} alt="Barrco Ventures Logo" width={120} className="mb-3" />
             <div className="mb-3 fw-semibold" style={{ maxWidth: 320, color: '#fff', fontSize: '1.08rem', lineHeight: 1.5 }}>
               Barrco Ventures Private Limited –<br />
               Your multi-activity partner company. From renewable energy to digital innovation and manufacturing excellence.
@@ -26,12 +28,12 @@ const Footer = () => {
           <div className="col-6 col-md-2 col-lg-2 mb-4 mb-md-0">
             <h6 className="fw-bold mb-3 text-white">Quick Links</h6>
             <ul className="list-unstyled" style={{ lineHeight: 2 }}>
-              <li><a href="#hero" className="text-white text-decoration-none">Home</a></li>
-              <li><a href="#about" className="text-white text-decoration-none">About Us</a></li>
-              <li><a href="#itdigital" className="text-white text-decoration-none">IT & Digital</a></li>
-              <li><a href="#solar" className="text-white text-decoration-none">Solar Energy</a></li>
-              <li><a href="#stationery" className="text-white text-decoration-none">Stationery</a></li>
-              <li><a href="#contact" className="text-white text-decoration-none">Contact</a></li>
+              <li><Link to="/" className="text-white text-decoration-none">Home</Link></li>
+              <li><Link to="/about" className="text-white text-decoration-none">About Us</Link></li>
+              <li><Link to="/it-digital" className="text-white text-decoration-none">IT & Digital</Link></li>
+              <li><Link to="/solar-energy" className="text-white text-decoration-none">Solar Energy</Link></li>
+              <li><Link to="/stationery" className="text-white text-decoration-none">Stationery</Link></li>
+              <li><Link to="/contact" className="text-white text-decoration-none">Contact</Link></li>
             </ul>
           </div>
 
