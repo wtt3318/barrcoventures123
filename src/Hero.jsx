@@ -2,19 +2,20 @@ import React from "react";
 import text2Img from "./assets/text2.jpg";
 import text3Img from "./assets/text3.jpg";
 import text4Img from "./assets/text4.jpg";
+import aerialImg from "./assets/aerial.jpg";
 
 const Hero = () => {
   return (
     <section 
       className="d-flex align-items-center justify-content-center text-white text-center"
       style={{
-        background: `url(${text4Img}) center/cover no-repeat, linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1e3a8a 100%)`,
+        background: `url(${aerialImg}) center/cover no-repeat`,
         minHeight: '80vh',
         position: 'relative',
         overflow: 'hidden'
       }}
     >
-      {/* Background Pattern/Overlay */}
+      {/* Overlay for better text visibility */}
       <div 
         style={{
           position: 'absolute',
@@ -22,16 +23,12 @@ const Hero = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: `
-            radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
-            radial-gradient(circle at 40% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)
-          `,
-          pointerEvents: 'none'
+          background: 'rgba(0,0,0,0.45)',
+          zIndex: 1
         }}
       ></div>
 
-      <div className="container position-relative">
+      <div className="container position-relative" style={{ zIndex: 2 }}>
         <div className="row justify-content-center">
           <div className="col-lg-10 col-xl-8">
             {/* Main Heading */}
@@ -40,8 +37,8 @@ const Hero = () => {
               style={{ 
                 fontSize: 'clamp(2.5rem, 5vw, 4rem)',
                 lineHeight: '1.2',
-                color: '#000',
-                textShadow: '0 4px 16px rgba(255,255,255,0.7), 0 2px 4px rgba(255,255,255,0.5)'
+                color: '#fff',
+                textShadow: '0 4px 16px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.5)'
               }}
             >
               Discover Your Future Plans<br />
@@ -54,10 +51,11 @@ const Hero = () => {
               style={{ 
                 fontSize: 'clamp(1.1rem, 2vw, 1.3rem)',
                 fontWeight: '400',
-                opacity: '0.95',
+                opacity: '1',
                 maxWidth: '600px',
                 margin: '0 auto 2rem',
-                color: '#ef4444'
+                color: '#fff',
+                textShadow: '0 2px 8px rgba(0,0,0,0.7)'
               }}
             >
               Your Multi-Activity Partner Company Awaits! From renewable energy to 
@@ -70,8 +68,9 @@ const Hero = () => {
               style={{ 
                 fontSize: '1.2rem',
                 fontWeight: '500',
-                opacity: '0.9',
-                color: '#ef4444'
+                opacity: '1',
+                color: '#fff',
+                textShadow: '0 2px 8px rgba(0,0,0,0.7)'
               }}
             >
               Barrco Ventures Private Limited
