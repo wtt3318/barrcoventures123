@@ -1,0 +1,108 @@
+:root {
+  --primary: #2563eb; /* vibrant blue */
+  --secondary: #06b6d4; /* teal */
+  --accent: #f43f5e; /* magenta */
+  --bg-gradient: linear-gradient(135deg, #2563eb 0%, #06b6d4 50%, #f43f5e 100%);
+  --section-bg-1: linear-gradient(120deg, #f0f4ff 0%, #e0f7fa 100%);
+  --section-bg-2: linear-gradient(120deg, #fdf6f0 0%, #f0f4ff 100%);
+  --footer-bg: linear-gradient(180deg, #1e293b 0%, #2563eb 100%);
+  --text-main: #1e293b;
+  --text-heading: #0f172a;
+  --text-light: #f3f6fa;
+}
+
+body {
+  background: var(--section-bg-1);
+  color: var(--text-main);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.btn-primary, .btn-gradient {
+  background: var(--bg-gradient);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(36, 99, 235, 0.08);
+}
+.btn-primary:hover, .btn-gradient:hover {
+  background: linear-gradient(135deg, #06b6d4 0%, #2563eb 60%, #f43f5e 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(36, 99, 235, 0.15);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-outline-primary:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.card, .card-body, .rounded-3, .rounded-4 {
+  border-radius: 18px !important;
+  box-shadow: 0 2px 16px rgba(36, 99, 235, 0.07);
+}
+
+.section-bg-1 {
+  background: var(--section-bg-1);
+}
+.section-bg-2 {
+  background: var(--section-bg-2);
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+.text-primary {
+  color: var(--primary) !important;
+}
+.text-secondary {
+  color: var(--secondary) !important;
+}
+.bg-gradient {
+  background: var(--bg-gradient) !important;
+}
+
+.footer-bg {
+  background: var(--footer-bg) !important;
+  color: var(--text-light) !important;
+}
+
+input, textarea {
+  border-radius: 8px !important;
+  border: 1.5px solid #e0e7ef !important;
+  background: #f8fafc !important;
+  color: var(--text-main) !important;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 2px #2563eb22 !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e0e7ef;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 8px;
+}
