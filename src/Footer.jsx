@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "./assets/barrco-ventures-logo.png";
+import logo from "./assets/optimized/barrco-ventures-logo.webp";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   return (
-    <footer style={{ background: 'linear-gradient(180deg, #0a1a3c 0%, #1976d2 100%)', color: '#f3f6fa', fontSize: '1rem', letterSpacing: 0.1 }} className="pt-3 pb-3 mt-0">
+    <footer style={{ background: 'linear-gradient(180deg, #0a1a3c 0%, #1976d2 100%)', color: '#f3f6fa', fontSize: '1rem', letterSpacing: 0.1, paddingTop: 39 }} className="pt-3 pb-3 mt-0">
       <div className="container">
         <div className="row gy-4 align-items-start justify-content-center text-center text-md-start">
           {/* Logo & Company Info */}

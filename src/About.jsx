@@ -1,6 +1,6 @@
 import React from "react";
 import { FaBullseye, FaEye, FaBuilding } from "react-icons/fa";
-import text6Img from "./assets/text6.jpg";
+import text6Img from "./assets/optimized/text6.webp";
 
 const About = () => {
   return (

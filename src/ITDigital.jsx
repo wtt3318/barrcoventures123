@@ -1,5 +1,6 @@
 import React from "react";
-import slider from "../src/assets/slide.png"; // Adjust the path as necessary
+import text10Img from "./assets/optimized/text10.webp";
+
 const ITDigital = () => {
   const digitalProducts = [
     {
@@ -95,14 +96,22 @@ const ITDigital = () => {
   ];
 
   return (
-    <section className="py-5" style={{ backgroundColor: '#ffffff' }}>
+    <section 
+      className="py-5" 
+      style={{ 
+        background: `linear-gradient(rgba(20,30,50,0.45), rgba(20,30,50,0.45)), url(${text10Img}) center/cover no-repeat`,
+        backgroundAttachment: 'fixed',
+        color: '#fff',
+        position: 'relative'
+      }}
+    >
       <div className="container">
         {/* Header Section */}
         <div className="text-center mb-5">
-          <h2 className="display-4 fw-bold mb-4" style={{ color: '#2c3e50' }}>
+          <h2 className="display-4 fw-bold mb-4" style={{ color: '#fff' }}>
             Information & Digital Technology
           </h2>
-          <p className="lead text-muted mx-auto" style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6' }}>
+          <p className="lead mx-auto" style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6', color: '#fff' }}>
             We develop, promote, and maintain various mobile applications and software solutions, 
             creating innovative digital experiences worldwide.
           </p>
@@ -110,41 +119,29 @@ const ITDigital = () => {
 
         {/* Digital Innovation Section */}
         <div className="row align-items-center mb-5">
-          <div className="col-lg-6 mb-4 mb-lg-0">
-            <h3 className="h2 fw-bold mb-4" style={{ color: '#2c3e50' }}>
+          <div className="col-lg-12">
+            <h3 className="h2 fw-bold mb-4" style={{ color: '#fff' }}>
               Digital Innovation at Scale
             </h3>
             
-            <p className="text-muted mb-3" style={{ fontSize: '1.1rem', lineHeight: '1.7', textAlign: 'justify' }}>
+            <p className="mb-3" style={{ fontSize: '1.1rem', lineHeight: '1.7', textAlign: 'justify', color: '#fff' }}>
               We are an Information and Digital Technology company specializing in 
               digital and information technology services, software and application 
               development and management.
             </p>
             
-            <p className="text-muted" style={{ fontSize: '1.1rem', lineHeight: '1.7', textAlign: 'justify' }}>
+            <p className="mb-0" style={{ fontSize: '1.1rem', lineHeight: '1.7', textAlign: 'justify', color: '#fff' }}>
               At this moment we are developing the products listed below, which will be 
               launched worldwide in 2025-2026. All products and brands are owned by 
               Nens Corporation, USA, with worldwide marketing and promotion 
               authorized to Intercate, UAE.
             </p>
           </div>
-          
-          <div className="col-lg-6 text-center mb-4 mb-lg-0">
-            <div className="position-relative">
-              <img 
-                src={slider}
-                alt="Digital Technology"
-                className="img-fluid rounded-3 shadow-lg"
-                style={{ borderRadius: '20px' }}
-              />
-              
-            </div>
-          </div>
         </div>
 
         {/* Digital Products Portfolio */}
         <div className="text-center mb-5">
-          <h3 className="h2 fw-bold" style={{ color: '#2c3e50' }}>
+          <h3 className="h2 fw-bold" style={{ color: '#fff' }}>
             Our Digital Products Portfolio
           </h3>
         </div>
@@ -157,6 +154,7 @@ const ITDigital = () => {
                 className="card h-100 border-0 shadow-sm"
                 style={{ 
                   borderRadius: '15px',
+                  backgroundColor: 'rgba(255,255,255,0.95)',
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease'
                 }}
                 onMouseOver={(e) => {

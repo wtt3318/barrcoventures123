@@ -1,8 +1,8 @@
 import React from "react";
-import text2Img from "./assets/text2.jpg";
-import text3Img from "./assets/text3.jpg";
-import text4Img from "./assets/text4.jpg";
-import aerialImg from "./assets/aerial.jpg";
+import text2Img from "./assets/optimized/text2.webp";
+import text3Img from "./assets/optimized/text3.webp";
+import text4Img from "./assets/optimized/text4.webp";
+import aerialImg from "./assets/optimized/aerial.webp";
 
 const Hero = () => {
   return (

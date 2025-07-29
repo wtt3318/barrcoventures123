@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../src/assets/barrco-ventures-logo.png"; // Adjust the path as necessary
+import logo from "./assets/optimized/barrco-ventures-logo.webp"; // Adjust the path as necessary
 const Navbar = () => {
   return (
     <>

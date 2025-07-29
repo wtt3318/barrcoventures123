@@ -1,4 +1,5 @@
 import React from "react";
+import text7Img from "./assets/optimized/text7.webp";
 
 const Stationery = () => {
   const exportMarkets = [
@@ -28,32 +29,40 @@ const Stationery = () => {
   ];
 
   return (
-    <section className="py-5" style={{ background: 'linear-gradient(180deg, #f8f9fa 60%, #e9f0fa 100%)' }}>
+    <section 
+      className="py-5" 
+      style={{ 
+        background: `linear-gradient(rgba(20,30,50,0.45), rgba(20,30,50,0.45)), url(${text7Img}) center/cover no-repeat`,
+        backgroundAttachment: 'fixed',
+        color: '#fff',
+        position: 'relative'
+      }}
+    >
       <div className="container">
         {/* Header Section */}
         <div className="text-center mb-5">
-          <h2 className="display-4 fw-bold mb-4" style={{ color: '#2c3e50' }}>
+          <h2 className="display-4 fw-bold mb-4" style={{ color: '#fff' }}>
             Stationery Products
           </h2>
-          <p className="lead text-muted mx-auto" style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6' }}>
+          <p className="lead mx-auto" style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6', color: '#fff' }}>
             We manufacture and export various Barrco pen brands and paper products, delivering quality stationery solutions worldwide.
           </p>
         </div>
 
         {/* Manufacturing & Export Section */}
         <div className="row align-items-center mb-5">
-          <div className="col-lg-6 mb-4 mb-lg-0">
-            <h3 className="h2 fw-bold mb-4" style={{ color: '#2c3e50' }}>
+          <div className="col-lg-12">
+            <h3 className="h2 fw-bold mb-4" style={{ color: '#fff' }}>
               Quality Manufacturing & Export
             </h3>
-            <p className="text-muted mb-3" style={{ fontSize: '1.1rem', lineHeight: '1.7', textAlign: 'justify' }}>
+            <p className="mb-3" style={{ fontSize: '1.1rem', lineHeight: '1.7', textAlign: 'justify', color: '#fff' }}>
               We manufacturer and export various Barrco pen brands and Barrco paper brand "R&R". Our all stationery brands of pens and paper are being exported mainly to CIS countries and expanding globally.
             </p>
-            <p className="text-muted mb-3" style={{ fontSize: '1.1rem', lineHeight: '1.7', textAlign: 'justify' }}>
+            <p className="mb-3" style={{ fontSize: '1.1rem', lineHeight: '1.7', textAlign: 'justify', color: '#fff' }}>
               Our manufacturing processes adhere to international quality standards, ensuring that every product meets the highest standards of quality and durability. We take pride in our commitment to excellence and customer satisfaction.
             </p>
             <div className="mb-3">
-              <span className="fw-semibold me-2" style={{ color: '#1976d2' }}>
+              <span className="fw-semibold me-2" style={{ color: '#fff' }}>
                 <i className="fas fa-globe me-2"></i>Export Markets
               </span>
               {exportMarkets.map((market, idx) => (
@@ -74,23 +83,13 @@ const Stationery = () => {
               View Product Catalog
             </button>
           </div>
-          <div className="col-lg-6">
-            <div className="position-relative">
-              <img
-                src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Stationery Products"
-                className="img-fluid rounded-3 shadow-lg"
-                style={{ borderRadius: '20px' }}
-              />
-            </div>
-          </div>
         </div>
 
         {/* Product Cards */}
         <div className="row g-4 mb-5">
           {products.map((product, idx) => (
             <div key={idx} className="col-md-6">
-              <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: '15px' }}>
+              <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: '15px', backgroundColor: 'rgba(255,255,255,0.95)' }}>
                 <div className="card-body d-flex align-items-center p-4">
                   <div className="d-inline-flex align-items-center justify-content-center rounded-circle me-4" style={{ width: '60px', height: '60px', backgroundColor: '#e3f2fd', border: '2px solid #1976d2' }}>
                     <i className={product.icon} style={{ fontSize: '1.5rem', color: '#1976d2' }}></i>
@@ -108,16 +107,16 @@ const Stationery = () => {
         {/* Compliance Section */}
         <div className="text-center mt-5">
           <div className="d-flex align-items-center justify-content-center mb-4">
-            <i className="fas fa-check-circle me-3" style={{ fontSize: '2rem', color: '#1976d2' }}></i>
-            <h3 className="h2 fw-bold mb-0" style={{ color: '#2c3e50' }}>Our Compliance with Standards</h3>
+            <i className="fas fa-check-circle me-3" style={{ fontSize: '2rem', color: '#fff' }}></i>
+            <h3 className="h2 fw-bold mb-0" style={{ color: '#fff' }}>Our Compliance with Standards</h3>
           </div>
           <div className="d-flex flex-wrap justify-content-center gap-3 mb-3">
             {standards.map((std, idx) => (
-              <span key={idx} className="px-4 py-2 border border-primary rounded-pill fw-semibold text-primary" style={{ fontSize: '1rem', background: '#fff' }}>{std}</span>
+              <span key={idx} className="px-4 py-2 border border-white rounded-pill fw-semibold" style={{ fontSize: '1rem', background: 'rgba(255,255,255,0.95)', color: '#2c3e50' }}>{std}</span>
             ))}
           </div>
-          <div className="mt-3 mb-2" style={{ fontSize: '1rem' }}>
-            For more information about our paper products, visit: <a href="https://www.barrcopapers.com" target="_blank" rel="noopener noreferrer" className="fw-semibold text-primary">www.barrcopapers.com</a>
+          <div className="mt-3 mb-2" style={{ fontSize: '1rem', color: '#fff' }}>
+            For more information about our paper products, visit: <a href="https://www.barrcopapers.com" target="_blank" rel="noopener noreferrer" className="fw-semibold" style={{ color: '#fff', textDecoration: 'underline' }}>www.barrcopapers.com</a>
           </div>
         </div>
       </div>
