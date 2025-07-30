@@ -13,6 +13,7 @@ import BusinessEnergy from "./pages/solar-energy/BusinessEnergy";
 import PowerPlant from "./pages/solar-energy/PowerPlant";
 import IndustrialSolutions from "./pages/solar-energy/IndustrialSolutions";
 import ScrollToTop from "./components/ScrollToTop";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

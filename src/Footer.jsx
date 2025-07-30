@@ -71,7 +71,7 @@ const Footer = () => {
             © 2025 Barrco Ventures Private Limited. All rights reserved.
           </div>
           <div className="d-flex gap-3 align-items-center justify-content-center justify-content-md-end" style={{ color: '#e0e6f0', fontSize: '1rem' }}>
-            <a href="#top" className="text-white text-decoration-none" id="footer-back-to-top">↑ Back to Top</a>
+           
           </div>
         </div>
       </div>
