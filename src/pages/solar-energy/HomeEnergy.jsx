@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HomeEnergy = () => (
   <section className="container py-5">
@@ -84,6 +85,25 @@ const HomeEnergy = () => (
       <p style={{ fontSize: '1.1rem', color: '#333' }}>
         With us, you are taking a big step towards a sustainable energy supply independent of fossil fuels. Good to know: Solar energy systems have a huge impact on the environment and allow you to reduce CO2 emissions by several million tons annually.
       </p>
+    </div>
+    
+    {/* Back to Solar Energy Link */}
+    <div className="mt-5 pt-4" style={{ borderTop: '1px solid #e9ecef' }}>
+      <Link 
+        to="/solar-energy" 
+        className="text-decoration-none d-inline-flex align-items-center"
+        style={{ 
+          color: '#1976d2', 
+          fontSize: '1rem',
+          fontWeight: '500',
+          transition: 'color 0.2s ease'
+        }}
+        onMouseEnter={(e) => e.target.style.color = '#1565c0'}
+        onMouseLeave={(e) => e.target.style.color = '#1976d2'}
+      >
+        <i className="fas fa-arrow-left me-2"></i>
+        ← Back to the Solar Energy page
+      </Link>
     </div>
   </section>
 );
